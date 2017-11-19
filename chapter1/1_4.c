@@ -1,6 +1,7 @@
 #include <time.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include "./share.h"
 
 unsigned long * sequenceArray(unsigned long);
 void shuffleArray(unsigned long *, unsigned long);
@@ -54,8 +55,7 @@ void writeToFile (const char * filename, const unsigned long * array , const uns
 }
 
 int main() {
-    unsigned long length = 1000;
-    unsigned long * s = generateShuffleArray(length);
-    writeToFile("./tmp/output", s, length);
+    unsigned long * s = generateShuffleArray(ARRAY_SIZE);
+    writeToFile("./tmp/output", s, ARRAY_SIZE);
     free(s);
 }
