@@ -1,15 +1,13 @@
-#include <time.h>
-#include "./binary_search.c"
-
 #define s binarysearch
 
-int n, t;
-int * x;
 clock_t starttime, endtime, clicks;
 
-int main() {
+void timedriver();
+
+void timedriver() {
     int numtests, i, j;
     double time_spend;
+
     while(scanf("%d %d", &n, &numtests) != EOF) {
         x = malloc(sizeof(int) * n);
         for (i = 0; i < n; i ++) {

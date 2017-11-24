@@ -1,4 +1,3 @@
-#include "./binary_search.c"
 #define s binarysearch
 
 void test_distinct_elements();
@@ -38,19 +37,4 @@ void test_same_elements() {
     assert(s(5) == -1);
     assert(s(15) == -1);
     free(x);
-}
-
-int main() {
-    n = 1000;
-    test_distinct_elements();
-    test_same_elements();
-
-    while(scanf("%d %d", &n, &t) != EOF) {
-        x = malloc(sizeof(int) * n);
-        for (int i = 0; i < n; i ++) {
-            x[i] = 10 * i;
-        }
-        assert(sorted());
-        printf("%d\n", binarysearch(t));
-    }
 }

@@ -1,7 +1,3 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <assert.h>
-
 typedef int DataType;
 int n, t;
 int * x;
@@ -24,14 +20,3 @@ int binarysearch(DataType t) {
     }
     return -1;
 }
-
-/* int main() { */
-/*     while(scanf("%d %d", &n, &t) != EOF) { */
-/*         x = malloc(sizeof(int) * n); */
-/*         for (int i = 0; i < n; i ++) { */
-/*             x[i] = 10 * i; */
-/*         } */
-/*         assert(sorted()); */
-/*         printf("%d\n", binarysearch(t)); */
-/*     } */
-/* } */
