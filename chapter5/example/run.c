@@ -1,6 +1,6 @@
 #include "./share.h"
 #include "./binary_search.c"
-#include "./binary_earch_test.c"
+#include "./binary_search_test.c"
 #include "./timedriver.c"
 
 int main() {
@@ -9,4 +9,7 @@ int main() {
     n = 100000;
     test_distinct_elements();
     test_same_elements();
+
+    prepare_elements();
+    sorted();
 }

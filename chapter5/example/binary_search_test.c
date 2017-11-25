@@ -3,13 +3,24 @@
 void test_distinct_elements();
 void test_same_elements();
 int sorted();
+void prepare_elements();
 
 int sorted() {
     int i;
     for (i = 0; i < n - 1; i++) {
-        if (x[i] > x[i+1]) return 0;
+
+        // Add x[i] > x[n - 1] for fail fast
+        if (x[i] > x[i+1] || x[i] > x[n - 1]) return 0;
     }
     return 1;
+}
+
+void prepare_elements() {
+    int i;
+    x = malloc(sizeof(int) * n);
+    for (i = 0; i < n; i ++) {
+        x[i] = 10 * i;
+    }
 }
 
 void test_distinct_elements() {
