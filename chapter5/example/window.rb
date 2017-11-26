@@ -1,4 +1,13 @@
 require 'tk'
+require 'fiddle'
+
+libm = Fiddle.dlopen('./binary_search.so')
+
+binary_search =  Fiddle::Function.new(libm['binarysearch'], [Fiddle::TYPE_LONG], Fiddle::TYPE_LONG)
+prepare_elements =  Fiddle::Function.new(libm['prepare_elements'], [Fiddle::TYPE_VOID], Fiddle::TYPE_VOID)
+
+puts prepare_elements.call(nil)
+puts binary_search.call(100)
 
 root = TkRoot.new { title "Hello, World!" }
 
